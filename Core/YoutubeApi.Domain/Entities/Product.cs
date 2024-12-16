@@ -9,7 +9,7 @@ namespace YoutubeApi.Domain.Entities
 {
     public class Product : EntityBase
     {
-        public required int Title { get; set; }
+        public required string Title { get; set; }
         public required string Description { get; set; }
         public required int BrandId { get; set; }
         public required decimal Price { get; set; }
