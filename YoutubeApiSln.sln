@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3F4F9576-AA6E-4077-9872-8D71BEF328A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastracture", "Infrastracture", "{2A1C9549-E7B7-47B9-97B0-CC301C1A7438}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A7CF2389-A404-4A94-97B7-1952D57407FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Domain", "Core\YoutubeApi.Domain\YoutubeApi.Domain.csproj", "{496E3863-00C7-45F5-9278-EDE63FAD897D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Application", "Core\YoutubeApi.Application\YoutubeApi.Application.csproj", "{5357136D-62F1-46BA-A27F-3DCA94A0E77F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Infrastracture", "Infrastracture\YoutubeApi.Infrastracture\YoutubeApi.Infrastracture.csproj", "{7386D612-820E-4BEE-8869-497A8960D5A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Persistence", "YoutubeApi.Persistence\YoutubeApi.Persistence.csproj", "{32DF04FA-569C-4451-BAEB-28B78EF9C28C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi.Api", "Presentation\YoutubeApi.Api\YoutubeApi.Api.csproj", "{5ACEF94C-120A-4014-84B3-14412525B396}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{496E3863-00C7-45F5-9278-EDE63FAD897D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496E3863-00C7-45F5-9278-EDE63FAD897D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496E3863-00C7-45F5-9278-EDE63FAD897D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496E3863-00C7-45F5-9278-EDE63FAD897D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5357136D-62F1-46BA-A27F-3DCA94A0E77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5357136D-62F1-46BA-A27F-3DCA94A0E77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5357136D-62F1-46BA-A27F-3DCA94A0E77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5357136D-62F1-46BA-A27F-3DCA94A0E77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7386D612-820E-4BEE-8869-497A8960D5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7386D612-820E-4BEE-8869-497A8960D5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7386D612-820E-4BEE-8869-497A8960D5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7386D612-820E-4BEE-8869-497A8960D5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32DF04FA-569C-4451-BAEB-28B78EF9C28C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DF04FA-569C-4451-BAEB-28B78EF9C28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DF04FA-569C-4451-BAEB-28B78EF9C28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DF04FA-569C-4451-BAEB-28B78EF9C28C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ACEF94C-120A-4014-84B3-14412525B396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACEF94C-120A-4014-84B3-14412525B396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACEF94C-120A-4014-84B3-14412525B396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACEF94C-120A-4014-84B3-14412525B396}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{496E3863-00C7-45F5-9278-EDE63FAD897D} = {3F4F9576-AA6E-4077-9872-8D71BEF328A5}
+		{5357136D-62F1-46BA-A27F-3DCA94A0E77F} = {3F4F9576-AA6E-4077-9872-8D71BEF328A5}
+		{7386D612-820E-4BEE-8869-497A8960D5A4} = {2A1C9549-E7B7-47B9-97B0-CC301C1A7438}
+		{32DF04FA-569C-4451-BAEB-28B78EF9C28C} = {2A1C9549-E7B7-47B9-97B0-CC301C1A7438}
+		{5ACEF94C-120A-4014-84B3-14412525B396} = {A7CF2389-A404-4A94-97B7-1952D57407FC}
+	EndGlobalSection
+EndGlobal
