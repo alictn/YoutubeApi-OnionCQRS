@@ -8,6 +8,7 @@ namespace YoutubeApi.Application
         public static void AddAplication(this IServiceCollection services)
         {
             var assembly = Assembly.GetExecutingAssembly();
+
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
         }
     }

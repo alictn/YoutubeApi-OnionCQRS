@@ -1,4 +1,5 @@
 using YoutubeApi.Application;
+using YoutubeApi.Mapper;
 using YoutubeApi.Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Configuration
 
 builder.Services.AddPersistence(builder.Configuration);//bu kýsým bizim persistence katmanýmýzý eklememizi saðlýyor
 builder.Services.AddAplication();
+builder.Services.AddCustomMapper();
 
 var app = builder.Build();
 
