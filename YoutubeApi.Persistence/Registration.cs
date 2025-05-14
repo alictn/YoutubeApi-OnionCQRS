@@ -15,6 +15,7 @@ namespace YoutubeApi.Persistence
             opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped(typeof(IReadRepositories<>), typeof(ReadRepositories<>));
+            services.AddScoped(typeof(IWriteRepositories<>), typeof(WriteRepositories<>));
         }
     }
 }
