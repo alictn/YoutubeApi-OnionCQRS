@@ -28,11 +28,6 @@ namespace YoutubeApi.Persistence.Context
                         .Property(e => e.Discount)
                         .HasColumnType("decimal(18,2)");
 
-
-
-
-
-
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
