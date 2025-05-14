@@ -1,4 +1,7 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
+using YoutubeApi.Application.DTOs;
+using YoutubeApi.Application.Interfaces.AutoMapper;
 using YoutubeApi.Application.Interfaces.UnitOfWorks;
 using YoutubeApi.Domain.Entities;
 
@@ -7,26 +10,26 @@ namespace YoutubeApi.Application.Features.Query.GetAllProducts
     public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, IList<GetAllProductQueryResponse>>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public GetAllProductQueryHandler(IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+        public GetAllProductQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            this._unitOfWork = unitOfWork;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         public async Task<IList<GetAllProductQueryResponse>> Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken)
         {
-            var products = await _unitOfWork.GetReadRepositories<Product>().GetAllAsync();
+            var products = await _unitOfWork.GetReadRepositories<Product>().GetAllAsync(include: x => x.Include(b => b.Brand));
 
-            List<GetAllProductQueryResponse> response = new();
-            foreach (var product in products)
-            {
-                response.Add(new GetAllProductQueryResponse
-                {
-                    Title = product.Title,
-                    Description = product.Description,
-                    Discount = product.Discount,
-                    Price = product.Price - (product.Price * product.Discount / 100),
-                });
-            }
-            return response;
+            var brand = _mapper.Map<BrandDto, Brand>(new Brand());
+
+
+            var map = _mapper.Map<GetAllProductQueryResponse, Product>(products);
+
+            foreach (var item in map)
+
+                item.Price -= (item.Price * item.Discount / 100);
+
+            return map;
         }
     }
 }
