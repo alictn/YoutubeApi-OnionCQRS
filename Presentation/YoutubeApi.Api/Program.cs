@@ -1,3 +1,4 @@
+using YoutubeApi.Application;
 using YoutubeApi.Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,10 @@ builder.Configuration
     .SetBasePath(env.ContentRootPath)//localde yada sunucuda generic olarak dosya yolumuzu alýyoruz 
     .AddJsonFile("appsettings.json", optional: false)//bu app settings dosyasýný bulmasý için deðerimizi false vedik
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);//burasý olabilir de olmayabilir de
+
 builder.Services.AddPersistence(builder.Configuration);//bu kýsým bizim persistence katmanýmýzý eklememizi saðlýyor
+builder.Services.AddAplication();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
